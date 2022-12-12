@@ -1,0 +1,21 @@
+﻿@model List<Character>
+@{
+    ViewData["Title"] = "BaseHome";
+}
+
+<table style="width: 60%">
+    <tr>
+        <th style="text-align:left">Name</th>
+        <th style="text-align:left">Gender</th>
+        <th style="text-align:left">Played By</th>
+    </tr>
+    @foreach(Character character in Model)
+    {
+    <tr>
+        <td style="text-align:left">@character.name</td>
+        <td style="text-align:left">@character.gender</td>
+        <td style="text-align:left">@string.Join(", ", character.playedBy)</td>
+    </tr>
+    }
+</table>
+

@@ -1,0 +1,30 @@
+﻿@model House
+@{
+    ViewData["Title"] = "HouseDetails";
+}
+<div class="rsvpform"> 
+<h1>@Model.name</h1>
+<p><i>@Model.words</i></p>
+</div>
+<hr />
+    @if(Model.currentLordChar != null)
+    {
+            <h3>Lord: @Model.currentLordChar.name of @Model.region</h3>
+    }
+    else
+    {
+        <h3>Region: @Model.region</h3>
+    }
+
+<hr />
+
+<b>Sworn Members</b>
+<br />
+@foreach(Character character in Model.character)
+{
+    <li><a href="/home/CharDetails?url=@character.url">@character.name</a></li>
+}
+
+
+
+

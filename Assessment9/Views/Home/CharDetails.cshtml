@@ -1,0 +1,19 @@
+﻿@model Character
+@{
+    ViewData["Title"] = "CharDetails";
+}
+<div class="rsvpform"> 
+<h1>@Model.name</h1>
+<p>Played by: @string.Join(", ", Model.playedBy)
+    </p>
+
+Gender: @Model.gender
+<br />
+Mother: @Model.mother
+<br />
+Father: @Model.father
+<br />
+</div>
+
+
+
